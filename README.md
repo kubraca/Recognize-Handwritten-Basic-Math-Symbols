@@ -16,6 +16,7 @@ test accuracy also valid accuracy 95%. Finally, the expression is evaluated and 
 expression is printed on the screen.
 
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/69c0d114-8118-45a9-b69c-88427c4d5a35)
+
 Related Work
 a) Artifical Neural Network: 
 The concept of Artificial Neural networks plays a very important role in the human 
@@ -62,12 +63,15 @@ functions are a measurement of how good your model is in terms of predicting the
 expected outcome.
 
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/f5af2d33-1bcc-4c0f-9135-46cf32d44254)
+
  -Our Approach
 In this section, it will be mentioned how to make simple mathematical symbols 
 recognized with a simple model. Libraries and technologies used while developing this model 
 are: Open-cv, keras, numpy, tensorflow, matploit, pandasAfterwards, some operations were 
 performed on the data, for example, labeling and preproces the data.
+
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/8f976672-f484-4ab3-b14b-b1f18eb52c1a)
+
 Then we need to shuffle the data to get better results.Shuffling data serves the purpose 
 of reducing variance and making sure that models remain general and overfit less. The 
 obvious case where you'd shuffle your data is if your data is sorted by their class/target.
@@ -75,6 +79,7 @@ obvious case where you'd shuffle your data is if your data is sorted by their cl
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/52068f06-374a-4b1b-884c-081f6e04c921)
 
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/302bdd30-4485-4df8-afd1-c4b6b4767458)
+
 The train-test split is a technique for evaluating the performance of a machine learning 
 algorithm.It can be used for classification or regression problems and can be used for any 
 supervised learning algorithm.Train test discrimination is used to predict the performance of 
@@ -86,6 +91,7 @@ learning models to get consistent results. We can use cross-validation to mitiga
 randomness involved in machine learning models.
 
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/f55dd819-ae07-4ce3-b3be-a7113141b276)
+
 Data normalization is an important step that ensures that each input parameter (pixel in 
 this case) has a similar data distribution. This speeds up convergence when training the 
 network.
@@ -121,18 +127,22 @@ Model consists of 4 convolution layers, used 64 filters in the first two, 128 ea
 other two.In this section applied batch normalization between each layer, the data is 
 normalized before passing to the other layer. Also, maxpooled 2 layer so the number of 
 entries was halved.
+
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/be689d77-850c-4494-be8b-43c5942e1bac)
 
 Dropout was applied after the Flatten layer and did not transfer five percent of the features to 
 the other layer. So we avoided memorization and applied L2 regularization in the last dense 
 layers and got 0.001 in regularization coefficient. The last layer has 16 outputs. Also, the 
 output is of course not limited to this.
+
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/785a71e5-0a62-4615-9ca7-1ad170877511)
 
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/82cbfadf-ca60-4ed6-a273-55604a4cf1cb)
 Testing
 In this section, model saved an loaded. Also, compare actual y values with prediction y values and print the screen classification report.
+
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/db4b7636-0f8c-4c63-90cc-79650ed29d0e)
+
 Object detection is a process of finding all the possible instances of real-world 
 objects, such as human faces, flowers, cars, etc. in images or videos, in real-time with 
 utmost accuracy. The object detection technique uses derived features and learning 
@@ -154,6 +164,7 @@ detection process without explicitly defining the features to do the classificat
 learning approach is majorly based on Convolutional Neural Networks (CNNs).
 
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/8d97bc03-a1c8-44a8-8c4c-28a041e33c4a)
+
 In this model, is ready now we will use it on the equatio, first the picture is converted 
 to gray format, then canny edge detection is done and the lines of the picture become clear 
 with find contours, every single character is found and we order these characters from left to 
@@ -162,11 +173,14 @@ Each character taken in turn and convert it to the format the model wants with t
 normalization and resize stages and give it to the model then we draw around the characters 
 we found in the main picture and print the prediction result and add each result to the 
 characters array then we read this array sequentially and print the expression.
+
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/a7600e93-4a15-4a75-a8cd-ecd195e91b4d)
+
 In this section, some sample pictures are determined and the result is obtained. SequNet 
 model needs to be developed for some special images. For example, in this image the bracket 
 did not match the bracket index in the category array. Instead of matching the bracket index, it 
 gave wrong results like 6 or 0.
+
 ![image](https://github.com/kubraca/Recognize-Handwritten-Basic-Math-Symbols/assets/72304467/e0ca360c-e443-4ecb-b13c-4f2ed40ddb22)
 
 
